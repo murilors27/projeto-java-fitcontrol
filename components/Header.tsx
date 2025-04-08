@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
@@ -39,14 +38,19 @@ const Header = () => {
           Treinos
         </Link>
       </nav>
-      <div className="flex items-center">
-        <Image
-          src="/profile-pic.jpg"
-          alt="Foto de perfil"
-          className="h-10 w-10 rounded-full border-2 border-white"
-          width={40}
-          height={40}
-        />
+      <div className="flex gap-4">
+        <Link
+          href="/login"
+          className="text-white border border-white px-4 py-1 rounded-md hover:bg-white hover:text-[#001D61] transition duration-300"
+        >
+          Entrar
+        </Link>
+        <Link
+          href="/cadastro"
+          className="bg-white text-[#001D61] px-4 py-1 rounded-md font-semibold hover:bg-blue-200 transition duration-300"
+        >
+          Cadastre-se
+        </Link>
       </div>
     </header>
   );
